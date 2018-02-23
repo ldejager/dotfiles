@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Leon de Jager
+	email = leondejager@gmail.com
+	signingkey = 155EEC72169AA2B3
+[core]
+	pager = less -F -X
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
