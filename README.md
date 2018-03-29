@@ -21,12 +21,7 @@ brew install zsh zsh-completions zsh-syntax-highlighting stow pinentry-mac opens
 The rest of the packages below are also useful;
 
 ```
-awscli
-coreutils
-fontconfig
-tig
-tmux
-tree
+brew install awscli coreutils fontconfig tig tmux tree
 ```
 
 ## Configuration
@@ -34,24 +29,21 @@ tree
 Add the homebrew zsh version to `/etc/shells`
 
 ```
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+sudo dscl localhost -create /Local/Default/Users/${USER} UserShell /usr/local/bin/zsh
 ```
 
 Set zsh as your default shell:
 
 ```
-chsh -s $(which zsh)
+sudo dscl localhost -change /Local/Default/Users/${USER} UserShell /bin/ksh $(which zsh)
 ```
 
 ## Installation
 
 ```
-git clone git@github.com:ldejager/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-stow zsh
-stow git
-stow gnupg
-stow vim
+git clone git@github.com:ldejager/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+make install
 
 source ~/.zshrc
 ```
