@@ -29,6 +29,14 @@ tmux
 tree
 ```
 
+## Configuration
+
+Set zsh as your default shell:
+
+```
+chsh -s $(which zsh)
+```
+
 ## Installation
 
 ```
