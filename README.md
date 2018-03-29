@@ -31,6 +31,12 @@ tree
 
 ## Configuration
 
+Add the homebrew zsh version to `/etc/shells`
+
+```
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+```
+
 Set zsh as your default shell:
 
 ```
