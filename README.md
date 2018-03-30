@@ -45,5 +45,9 @@ git clone git@github.com:ldejager/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 make install
 
+misc/fonts/install.sh
+
 source ~/.zshrc
 ```
+
+Restore profile (JSON) in iterm

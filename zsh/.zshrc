@@ -3,7 +3,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git)
+plugins=(git gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,15 +14,6 @@ POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
 
 setopt PROMPT_CR
 setopt PROMPT_SP
-
-# GPG
-
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)
-fi
 
 # Aliases
 
